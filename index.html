@@ -16,9 +16,9 @@
             <div class="navbar">
                 <div class="navbar__left">
                     <img src="assets/Desktop/logo-desktop.png" alt="Logo da loja Meteora">
-                    <button class="mobile-menu"><img src="assets/Mobile/icon-hamburger-menu.png" alt=""></button>
-                    <ul class="navbar__links">
-                        <button class="close-menu-btn"><img src="assets/Mobile/close-menu-icon.png" alt=""></button>
+                    <button class="mobile-menu" data-open-menu-btn><img src="assets/Mobile/icon-hamburger-menu.png" alt=""></button>
+                    <ul class="navbar__links" data-menu-links>
+                        <button class="close-menu-btn" data-close-menu-btn><img src="assets/Mobile/close-menu-icon.png" alt=""></button>
                         <li class="navbar__links-item"><a href="#">Home</a></li>
                         <li class="navbar__links-item"><a href="#">Nossas lojas</a></li>
                         <li class="navbar__links-item"><a href="#">Novidades</a></li>
@@ -34,6 +34,7 @@
             </div>
         </div>
     </nav>
-    
+
+    <script src="js/openMenu.js"></script>
 </body>
 </html>
