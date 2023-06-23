@@ -1,29 +1,4 @@
-// Variables
-$black-1: #000000;
-$black-2: #212529;
-
-$white: #FFFFFF;
-$grey-1: #6C757D;
-$grey-2: #CCCCCC;
-$grey-3: #CED4DA;
-
-
-$primary-yellow: #DAFF01;
-$primary-purple: #9353FF;
-
-$secondary-pink: #EE6471;
-$secondary-orange: #F87F46;
-
-// Mixins
-@mixin outline-btn($color) {
-    font-family: 'Inter', sans-serif;
-    cursor: pointer;
-    outline: none;
-    border: 1px solid $color;
-    color: $color;
-    background: transparent;
-    padding: 8px 16px;
-}
+@import 'variables';
 
 // Base css
 * {
@@ -46,4 +21,11 @@ button {
 .container {
     margin-inline: auto;
     width: min(95%, 100rem);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: $black-2;
+    text-align: center;
 }

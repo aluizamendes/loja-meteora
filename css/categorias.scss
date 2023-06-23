@@ -1,0 +1,39 @@
+@import 'variables';
+
+.categorias {
+    padding: 2rem 0;
+}
+
+.category__card__wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .category__card {
+        display: flex;
+        flex-direction: column;
+        
+        width: 190px;
+
+        &__image {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &__title {
+            background-color: $black-1;
+            text-align: center;
+            padding: .5rem 0;
+
+            span {
+                color: $white;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}

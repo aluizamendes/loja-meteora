@@ -18,4 +18,11 @@ button {
 .container {
   margin-inline: auto;
   width: min(95%, 100rem);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
 }/*# sourceMappingURL=base.css.map */
