@@ -1,0 +1,173 @@
+@import 'base';
+
+nav {
+    background-color: $black-1;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar__left {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+        .mobile-menu {
+            display: none;
+        }
+
+        .navbar__links {
+            display: flex;
+            gap: 32px;
+
+            .close-menu-btn {
+                display: none;
+            }
+
+            .navbar__links-item {
+                list-style: none;                
+
+                a { 
+                    text-decoration: none; 
+                    color: $white;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .navbar__right {
+        form {
+            display: flex;
+            gap: 1rem;
+
+            .search-bar {
+                width: 100%;
+                border-radius: 0;
+                outline: none;
+                border: 2px solid $grey-3;
+                padding: 8px 16px;
+                font-family: 'Inter', sans-serif;
+                color: $black-1;
+
+                &::placeholder {
+                    color: $grey-1;
+                }
+                &:focus {
+                    outline: 3px solid #ffffff5e;
+                }
+
+            }
+
+            .submit-search {
+                @include outline-btn($white);
+
+                &:hover {
+                    background-color: #ffffff5e;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 1rem;
+        background-color: $white;
+
+        .navbar {
+            flex-direction: column;
+
+        }
+
+        .navbar__left {
+            width: 100%;
+            justify-content: space-between;
+            background-color: $black-1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 62px;
+                left: 0;
+                top: 0;
+                background-color: $black-1;
+                z-index: -1;
+            }
+
+            .mobile-menu {
+                display: block;
+                padding: .3rem;
+                cursor: pointer;
+            }            
+
+            .navbar__links {
+                display: none;
+            }
+            
+            .navbar__links.active {
+                position: fixed;
+                background-color: $black-2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+
+                display: flex;
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+
+                .close-menu-btn {
+                    display: block;
+                    padding: 1rem;
+                    cursor: pointer;
+                    margin-top: 1.3rem;
+                    margin-left: auto;
+                    margin-right: 2rem;
+                }
+
+                .navbar__links-item {
+                    text-align: center;
+                    width: 100%;
+                }
+                .navbar__links-item a {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    padding: 2rem 1rem;
+                    border-bottom: 1px solid transparent;
+                    transition: .4s;
+                    
+                    &:hover {
+                        border-bottom: 1px solid $secondary-pink;
+                    }
+                }
+            }
+        }
+
+        .navbar__right {
+            margin-top: 1.5rem;
+            background-color: $white;
+            width: 100%;
+
+            form {
+                .submit-search {
+                    @include outline-btn($black-1);
+
+                    &:hover {
+                        background-color: #8686862c;
+                    }
+                }
+            }
+        }
+    }    
+}

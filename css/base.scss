@@ -15,12 +15,12 @@ $secondary-pink: #EE6471;
 $secondary-orange: #F87F46;
 
 // Mixins
-@mixin outline-btn {
+@mixin outline-btn($color) {
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     outline: none;
-    border: 1px solid $white;
-    color: $white;
+    border: 1px solid $color;
+    color: $color;
     background: transparent;
     padding: 8px 16px;
 }
