@@ -8,6 +8,8 @@
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 
     .category__card {
         display: flex;
