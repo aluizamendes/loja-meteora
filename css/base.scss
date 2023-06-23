@@ -1,0 +1,48 @@
+// Variables
+$black-1: #000000;
+$black-2: #212529;
+
+$white: #FFFFFF;
+$grey-1: #6C757D;
+$grey-2: #CCCCCC;
+$grey-3: #CED4DA;
+
+
+$primary-yellow: #DAFF01;
+$primary-purple: #9353FF;
+
+$secondary-pink: #EE6471;
+$secondary-orange: #F87F46;
+
+// Mixins
+@mixin outline-btn {
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid $white;
+    color: $white;
+    background: transparent;
+    padding: 8px 16px;
+}
+
+// Base css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+body {
+    background-color: $white;
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    all: unset;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(95%, 100rem);
+}
