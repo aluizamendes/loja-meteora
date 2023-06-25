@@ -10,6 +10,7 @@ $grey-3: #CED4DA;
 
 $primary-yellow: #DAFF01;
 $primary-purple: #9353FF;
+$primary-purple-2: #a570ff;
 
 $secondary-pink: #EE6471;
 $secondary-orange: #F87F46;
@@ -23,4 +24,22 @@ $secondary-orange: #F87F46;
     color: $color;
     background: transparent;
     padding: 8px 16px;
+}
+
+@mixin primary-btn($color, $text) {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.457px;
+    cursor: pointer;
+    outline: none;
+    color: $text;
+    background: $color;
+    padding: 8px 16px;
+    width: fit-content;
+    transition: .4s;
+
+    &:hover {
+        background: $primary-purple-2;
+    }
 }
