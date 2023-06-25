@@ -157,4 +157,111 @@ nav .navbar__right form .submit-search:hover {
   nav .navbar__right form .submit-search:hover {
     background-color: rgba(134, 134, 134, 0.1725490196);
   }
-}/*# sourceMappingURL=navbar.css.map */
+}
+.hero-banner {
+  background-image: url("../../assets/Desktop/Banner-carousel 1 _ 1440 (1).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+  width: 100%;
+  margin-top: -3px;
+}
+
+.categorias {
+  padding: 2rem 0;
+}
+
+.category__card__wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.category__card__wrapper .category__card {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+}
+.category__card__wrapper .category__card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.category__card__wrapper .category__card__title {
+  background-color: #000000;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.category__card__wrapper .category__card__title span {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.facilidades {
+  background-color: #000000;
+  padding: 5rem 0;
+}
+.facilidades h2 {
+  color: #FFFFFF;
+}
+.facilidades .facilidades__card_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content-title {
+  color: #DAFF01;
+  font-weight: 700;
+  font-size: 20px;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content-text {
+  color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  all: unset;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(95%, 100rem);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #212529;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
