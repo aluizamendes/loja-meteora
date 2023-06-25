@@ -41,3 +41,22 @@
         }
     }
 }
+
+// tablet
+@media (max-width: $breakpoint-tablet) {
+
+    .facilidades__card_wrapper {
+        flex-direction: column;
+    }
+
+    .facilidades__card {
+        width: 480px;
+    }
+}
+
+// mobile 
+@media (max-width: $breakpoint-mobile) {
+    .facilidades__card {
+        width: 100%;
+    }
+}

@@ -7,13 +7,17 @@ $grey-1: #6C757D;
 $grey-2: #CCCCCC;
 $grey-3: #CED4DA;
 
-
 $primary-yellow: #DAFF01;
 $primary-purple: #9353FF;
 $primary-purple-2: #a570ff;
 
 $secondary-pink: #EE6471;
 $secondary-orange: #F87F46;
+
+// breakpoints
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 450px;
+
 
 // Mixins
 @mixin outline-btn($color) {

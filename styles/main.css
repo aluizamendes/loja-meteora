@@ -202,6 +202,11 @@ nav .navbar__right form .submit-search:hover {
   font-weight: 500;
 }
 
+@media (max-width: 450px) {
+  .category__card {
+    flex-basis: 40%;
+  }
+}
 .produtos {
   padding: 1.5rem 0;
 }
@@ -273,6 +278,16 @@ nav .navbar__right form .submit-search:hover {
   background: #a570ff;
 }
 
+@media (max-width: 900px) {
+  .produtos__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 450px) {
+  .produtos__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .facilidades {
   background-color: #000000;
   padding: 5rem 0;
@@ -307,6 +322,19 @@ nav .navbar__right form .submit-search:hover {
   color: #FFFFFF;
 }
 
+@media (max-width: 900px) {
+  .facilidades__card_wrapper {
+    flex-direction: column;
+  }
+  .facilidades__card {
+    width: 480px;
+  }
+}
+@media (max-width: 450px) {
+  .facilidades__card {
+    width: 100%;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

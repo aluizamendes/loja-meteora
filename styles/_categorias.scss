@@ -37,3 +37,11 @@
         }
     }
 }
+
+// mobile
+@media (max-width: $breakpoint-mobile) {
+
+    .category__card {
+        flex-basis: 40%;
+    }
+}

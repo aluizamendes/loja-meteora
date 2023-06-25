@@ -62,3 +62,17 @@
         }
     }
 }
+
+// tablet
+@media (max-width: $breakpoint-tablet) {
+    .produtos__wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// mobile
+@media (max-width: $breakpoint-mobile) {
+    .produtos__wrapper{
+        grid-template-columns: 1fr;
+    }
+}
