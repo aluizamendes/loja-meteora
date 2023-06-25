@@ -175,14 +175,13 @@ nav .navbar__right form .submit-search:hover {
 .category__card__wrapper {
   margin-top: 1.5rem;
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 .category__card__wrapper .category__card {
   display: flex;
   flex-direction: column;
-  width: 190px;
 }
 .category__card__wrapper .category__card__image img {
   width: 100%;
@@ -327,7 +326,7 @@ button {
 
 .container {
   margin-inline: auto;
-  width: min(95%, 100rem);
+  width: min(95%, 80rem);
 }
 
 h2 {

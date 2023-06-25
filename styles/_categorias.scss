@@ -7,15 +7,13 @@
 .category__card__wrapper {
     margin-top: 1.5rem;
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
 
     .category__card {
         display: flex;
         flex-direction: column;
-        
-        width: 190px;
 
         &__image {
             img {
