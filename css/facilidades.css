@@ -1,0 +1,33 @@
+.facilidades {
+  background-color: #000000;
+  padding: 5rem 0;
+}
+.facilidades h2 {
+  color: #FFFFFF;
+}
+.facilidades .facilidades__card_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content-title {
+  color: #DAFF01;
+  font-weight: 700;
+  font-size: 20px;
+}
+.facilidades .facilidades__card_wrapper .facilidades__card__content-text {
+  color: #FFFFFF;
+}/*# sourceMappingURL=facilidades.css.map */

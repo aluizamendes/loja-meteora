@@ -1,0 +1,43 @@
+@import 'variables';
+
+.facilidades {
+    background-color: $black-1;
+    padding: 5rem 0;
+
+    h2 {
+        color: $white;
+    }
+
+    .facilidades__card_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        
+
+        margin-top: 3rem;
+
+        .facilidades__card {
+            display: flex;
+            align-items: center;
+            gap: 5%;
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                &-title {
+                    color: $primary-yellow;
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+                &-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
