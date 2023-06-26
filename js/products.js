@@ -62,7 +62,7 @@ function renderCard(product) {
                 <h4 class="produtos__card__content-title">${title}</h4>
                 <span class="produtos__card__content-description">${description}</span>
                 <span class="produtos__card__content-price">R$ ${price}</span>
-                <button>Ver mais</button>
+                <button data-btn-produto>Ver mais</button>
             </div>
         </article>
     `
