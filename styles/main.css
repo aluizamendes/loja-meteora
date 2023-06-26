@@ -287,6 +287,9 @@ nav .navbar__right form .submit-search:hover {
   .produtos__wrapper {
     grid-template-columns: 1fr;
   }
+  .produtos__card__image {
+    height: 25rem;
+  }
 }
 .facilidades {
   background-color: #000000;
@@ -335,6 +338,16 @@ nav .navbar__right form .submit-search:hover {
     width: 100%;
   }
 }
+footer {
+  background-color: #000000;
+  padding: 1rem 0;
+}
+footer p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -354,7 +367,7 @@ button {
 
 .container {
   margin-inline: auto;
-  width: min(95%, 80rem);
+  width: min(90%, 80rem);
 }
 
 h2 {

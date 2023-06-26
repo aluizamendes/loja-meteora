@@ -75,4 +75,10 @@
     .produtos__wrapper{
         grid-template-columns: 1fr;
     }
+
+    .produtos__card {
+        &__image {
+            height: 25rem;
+        }
+    }
 }

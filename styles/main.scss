@@ -3,6 +3,7 @@
 @use 'categorias';
 @use 'produtos';
 @use 'facilidades';
+@use 'footer';
 
 @import 'variables';
 
@@ -26,7 +27,7 @@ button {
 
 .container {
     margin-inline: auto;
-    width: min(95%, 80rem);
+    width: min(90%, 80rem);
 }
 
 h2 {
