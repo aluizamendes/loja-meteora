@@ -1,48 +1,7 @@
 @import 'variables';
 
 .modalProduto {
-    flex-direction: column;
-    width: 50rem;
-    border: none;
-    margin: auto;
-
-    border-radius: 4px;
-    background: $white;
-    box-shadow: 0px 4px 15px 4px #0f172245;
-
-    &::backdrop {
-        background: rgba(0, 0, 0, .7);
-    }
-
-    header {
-        background-color: $black-1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-
-        padding: 1rem 1.5rem;
-
-        .modal__title {
-            flex-grow: 1;
-            h2{
-                color: $white;
-                font-weight: 500;
-                font-size: 20px;
-                text-align: left;
-            }
-        }
-
-        button {
-            padding: 1rem;
-            cursor: pointer;
-            transition: .3s;
-
-            &:hover {
-                background-color: #ffffff17;
-            }
-        }
-    }
+    @include modal-general(50rem);
 
     .modal__wrapper {
         display: grid;

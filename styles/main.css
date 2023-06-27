@@ -412,7 +412,6 @@ footer p {
 }
 
 .modalProduto {
-  flex-direction: column;
   width: 50rem;
   border: none;
   margin: auto;
@@ -540,6 +539,53 @@ footer p {
 }
 .modalProduto .modal__wrapper .product__content button:hover {
   background: #a570ff;
+}
+
+.modalNewsletter {
+  width: 50rem;
+  border: none;
+  margin: auto;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px 4px rgba(15, 23, 34, 0.2705882353);
+}
+.modalNewsletter::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+.modalNewsletter header {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+}
+.modalNewsletter header .modal__title {
+  flex-grow: 1;
+}
+.modalNewsletter header .modal__title h2 {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+}
+.modalNewsletter header button {
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modalNewsletter header button:hover {
+  background-color: rgba(255, 255, 255, 0.0901960784);
+}
+.modalNewsletter .modal__wrapper {
+  display: flex;
+  padding: 1.5rem;
+  gap: 1.4rem;
+}
+.modalNewsletter .modal__wrapper p {
+  font-size: 18px;
+  color: #212529;
+  font-weight: 500;
 }
 
 * {

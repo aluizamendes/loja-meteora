@@ -1,0 +1,17 @@
+@import 'variables';
+
+.modalNewsletter {
+    @include modal-general(50rem);
+
+    .modal__wrapper {
+        display: flex;
+        padding: 1.5rem;
+        gap: 1.4rem;
+
+        p {
+            font-size: 18px;
+            color: $black-2;
+            font-weight: 500;
+        }
+    }
+}
