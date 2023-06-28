@@ -1,11 +1,53 @@
 @import 'variables';
 
-.hero-banner {
-    background-image: url("../assets/Desktop/Banner-carousel\ 1\ _\ 1440\ \(1\).png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 60vh;
+.swiper {
     width: 100%;
-    margin-top: -3px;
+    height: 60vh;
+
+    .swiper-button-prev {
+        &::after {
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 800;
+            top: 1px;
+            right: 1px;
+            color: $white;
+        }
+    }
+
+    .swiper-button-next {
+        &::after {
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 800;
+            top: 1px;
+            left: 1px;
+            color: $white;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $white;
+    }
+}
+
+.swiper-wrapper {
+
+    .s1, .s2, .s3 {
+        display: flex;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .s1 {
+        background-image: url('../assets/Desktop/Banner_carousel_1_1440.png');
+    }
+
+    .s2 {
+        background-image: url('../assets/Desktop/Banner_carousel_2_1440.png');
+    }
+
+    .s3 {
+        background-image: url('../assets/Desktop/Banner_carousel_3_1440.png');
+    }
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -36,7 +37,24 @@
     </nav>
 
     <header>
-        <section class="hero-banner"></section>
+        <section class="hero-banner">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide s1"></div>
+                    <div class="swiper-slide s2"></div>
+                    <div class="swiper-slide s3"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+    
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
     </header>
 
     <main>
@@ -170,5 +188,7 @@
     <script src="js/openMenu.js"></script>
     <script src="js/products.js"></script>
     <script src="js/newsletter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
