@@ -2,7 +2,7 @@
 
 .swiper {
     width: 100%;
-    height: 60vh;
+    height: 415px;
 
     .swiper-button-prev {
         &::after {
@@ -32,22 +32,79 @@
 }
 
 .swiper-wrapper {
-
     .s1, .s2, .s3 {
         display: flex;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 
+    // a primeira começa para telas grandes full HD
     .s1 {
-        background-image: url('../assets/Desktop/Banner_carousel_1_1440.png');
+        background-image: url('../assets/Desktop/Banner_carousel_1_1900.png');
     }
-
     .s2 {
-        background-image: url('../assets/Desktop/Banner_carousel_2_1440.png');
+        background-image: url('../assets/Desktop/Banner_carousel_2_1900.png');
     }
-
     .s3 {
-        background-image: url('../assets/Desktop/Banner_carousel_3_1440.png');
+        background-image: url('../assets/Desktop/Banner_carousel_3_1900.png');
+    }
+}
+
+// pra notebook
+@media (max-width: 1440px) {
+    .swiper-wrapper {
+        .s1 {
+            background-image: url('../assets/Desktop/Banner_carousel_1_1440.png');
+        }
+        .s2 {
+            background-image: url('../assets/Desktop/Banner_carousel_2_1440.png');
+        }
+        .s3 {
+            background-image: url('../assets/Desktop/Banner_carousel_3_1440.png');
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .swiper-wrapper {    
+        .s1 {
+            background-image: url('../assets/Tablet/Banner_carousel_1_768.png');
+        }
+        .s2 {
+            background-image: url('../assets/Tablet/Banner_carousel_2_768.png');
+        }
+        .s3 {
+            background-image: url('../assets/Tablet/Banner_carousel_3_768.png');
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .swiper-wrapper {    
+        .s1 {
+            background-image: url('../assets/Mobile/Banner_carousel_1_450.png');
+        }
+        .s2 {
+            background-image: url('../assets/Mobile/Banner_carousel_2_450.png');
+        }
+        .s3 {
+            background-image: url('../assets/Mobile/Banner_carousel_3_450.png');
+        }
+    }
+}
+
+// para dispositivos ainda menores
+@media (max-width: 375px) {
+    .swiper-wrapper {    
+        .s1 {
+            background-image: url('../assets/Mobile/Banner_carousel_1_375.png');
+        } 
+        .s2 {
+            background-image: url('../assets/Mobile/Banner_carousel_2_375.png');
+        }
+        .s3 {
+            background-image: url('../assets/Mobile/Banner_carousel_3_375.png');
+        }
     }
 }
