@@ -616,6 +616,11 @@ footer p {
   background: #a570ff;
 }
 
+@media (max-width: 450px) {
+  .modalProduto .modal__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .modalNewsletter {
   width: 50rem;
   border: none;
