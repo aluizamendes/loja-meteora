@@ -85,6 +85,17 @@
                         justify-content: center;
                         align-items: center;
                         gap: 4px;
+
+                        input {
+                            appearance: none;
+                            padding: 10px;
+                            border-radius:50%;
+                            border: .6px solid $grey-3;
+
+                            &:checked {
+                                box-shadow: inset 0px 0px 0px 5px $primary-purple;
+                            }
+                        }
                     }
                 }
             }

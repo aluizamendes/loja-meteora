@@ -629,6 +629,17 @@ footer p {
   align-items: center;
   gap: 4px;
 }
+.modalProduto .modal__wrapper .product__content__middle div .radio-field input, .modalProduto .modal__wrapper .product__content__bottom div .radio-field input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+  border-radius: 50%;
+  border: 0.6px solid #CED4DA;
+}
+.modalProduto .modal__wrapper .product__content__middle div .radio-field input:checked, .modalProduto .modal__wrapper .product__content__bottom div .radio-field input:checked {
+  box-shadow: inset 0px 0px 0px 5px #9353FF;
+}
 .modalProduto .modal__wrapper .product__content button {
   font-family: "Inter", sans-serif;
   font-size: 16px;
