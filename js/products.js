@@ -1,94 +1,16 @@
 const productList = document.querySelector("[data-lista-produtos]")
 
-// lista de produtos
-const products =  [
-    {
-        id: "1",
-        // colors: ["Azul claro", "Offwhite", "Preto", "Mescla"],
-        colors: {
-            "Mostarda": "#e69d1e",
-            "Azul claro": "#6eaaff",
-            "OffWhite": "#f0f2f5",
-            "Preto": "#000",
-            "Mescla": "#999999"
-        },
-        size: ["P", "PP", "M", "G", "GG"],
-        imageURL: "assets/Desktop/Imagens Cards/Camiseta.png",
-        title: "Camiseta Conforto",
-        description: "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
-        price: "70"    
-    },
-    {
-        id: "2",
-        colors: {
-            "Caqui": "#fce7c2",
-            "Azul escuro": "#1f0561",
-            "OffWhite": "#f0f2f5",
-            "Preto": "#000"
-        },
-        size: ["P", "PP", "M", "G", "GG"],
-        imageURL: "assets/Desktop/Imagens Cards/Calca.png",
-        title: "Calça Alfaiataria",
-        description: "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
-        price: "180"    
-    },
-    {
-        id: "3",
-        colors: {
-            "Branco": "#FFF",
-            "OffWhite": "#f0f2f5",
-            "Preto": "#000"
-        },
-        size: ["34", "35", "36", "37", "38", "39", "40"],
-        imageURL: "assets/Desktop/Imagens Cards/Tenis.png",
-        title: "Tênis Chunky",
-        description: "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
-        price: "250"    
-    },
-    {
-        id: "4",
-        colors: {
-            "Azul escuro": "#1f0561",
-            "Azul claro": "#6eaaff",
-            "Rosa": "#f587b6",
-            "Preto": "#000"
-        },
-        size: ["P", "PP", "M", "G", "GG"],
-        imageURL: "assets/Desktop/Imagens Cards/Jaqueta.png",
-        title: "Jaqueta Jeans",
-        description: "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
-        price: "150"    
-    },
-    {
-        id: "5",
-        colors: {
-            "Dourado": "#c4ae08",
-            "Marrom": "#78513e",
-            "Prata": "#999999",
-            "Preto": "#000"
-        },
-        size: ["Único"],
-        imageURL: "assets/Desktop/Imagens Cards/oculos.png",
-        title: "Óculos Redondo",
-        description: "Armação metálica em grafite com lentes arredondadas. Sem erro!",
-        price: "120"    
-    },
-    {
-        id: "6",
-        colors: ["Bege", "Rosa antigo", "Branco", "Preto"],
-        colors: {
-            "Bege": "#f7ab8b",
-            "Rosa antigo": "#b3568a",
-            "Branco": "#FFF",
-            "Preto": "#000"
-        },
-        size: ["Único"],
-        imageURL: "assets/Desktop/Imagens Cards/Bolsa.png",
-        title: "Bolsa coringa",
-        description: "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
-        price: "120"    
+async function getProducts() {
+    try {
+        const request = await fetch("../data/products.json")
+        const data = await request.json()
+        const products = data.products
+        return products
     }
-]
+    catch(error) {
+        console.log(error)
+    }
+}
 
 function renderCard(product) {
     const id = product.id
@@ -211,26 +133,31 @@ function showProductModal(product) {
     closeProductModalBtn.addEventListener("click", () => productModal.close())    
 }
 
-// renderizar os cards
-products.forEach(product => renderCard(product))
+// quando a janela é carregada
+window.addEventListener("load", async() => {
 
-// click dos botoes dos cards
-const productBtn = document.querySelectorAll("[data-btn-produto]")
+    // renderizar os cards
+    const products = await getProducts()
+    products.forEach((product) => renderCard(product))
 
-productBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    // click dos botoes dos cards
+    const productBtn = document.querySelectorAll("[data-btn-produto]")
 
-        const cardId = e.target.closest(".produtos__card").id
-        let productSelected = ""
-
-        // console.log(cardId)
-
-        products.forEach((product) => {
-            if (product.id == cardId) {
-                productSelected = product
-            }
+    productBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+    
+            const cardId = e.target.closest(".produtos__card").id
+            let productSelected = ""
+    
+            // console.log(cardId)
+    
+            products.forEach((product) => {
+                if (product.id == cardId) {
+                    productSelected = product
+                }
+            })
+    
+            showProductModal(productSelected)
         })
-
-        showProductModal(productSelected)
     })
 })
