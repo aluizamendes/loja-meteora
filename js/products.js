@@ -2,7 +2,7 @@ const productList = document.querySelector("[data-lista-produtos]")
 
 async function getProducts() {
     try {
-        const request = await fetch("../data/products.json")
+        const request = await fetch("../loja-meteora/data/products.json")
         const data = await request.json()
         const products = data.products
         return products
