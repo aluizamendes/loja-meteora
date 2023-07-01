@@ -619,6 +619,7 @@ footer p {
 }
 .modalProduto .modal__wrapper .product__content__middle div, .modalProduto .modal__wrapper .product__content__bottom div {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
   margin-top: 0.4rem;
 }
