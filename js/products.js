@@ -5,6 +5,7 @@ async function getProducts() {
         const request = await fetch("../loja-meteora/data/products.json")
         const data = await request.json()
         const products = data.products
+        //console.log(products)
         return products
     }
     catch(error) {
@@ -14,13 +15,14 @@ async function getProducts() {
 
 function renderCard(product) {
     const id = product.id
+    const category = product.category
     const image = product.imageURL
     const title = product.title
     const description = product.description
     const price = Number(product.price).toFixed(2).replace(".", ",")
 
     productList.innerHTML += `
-        <article class="produtos__card" id="${id}">
+        <article class="produtos__card" id="${id}" data-category="${category}" data-card-produto>
             <div class="produtos__card__image">
                 <img src="${image}">
             </div>

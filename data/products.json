@@ -2,6 +2,7 @@
     "products": [
         {
             "id": "1",
+            "category": "Camisetas",
             "colors": {
                 "Mostarda": "#e69d1e",
                 "Azul claro": "#6eaaff",
@@ -17,6 +18,7 @@
         },
         {
             "id": "2",
+            "category": "Calças",
             "colors": {
                 "Caqui": "#fce7c2",
                 "Azul escuro": "#1f0561",
@@ -31,6 +33,7 @@
         },
         {
             "id": "3",
+            "category": "Calçados",
             "colors": {
                 "Branco": "#FFF",
                 "OffWhite": "#f0f2f5",
@@ -44,6 +47,7 @@
         },
         {
             "id": "4",
+            "category": "Casacos",
             "colors": {
                 "Azul escuro": "#1f0561",
                 "Azul claro": "#6eaaff",
@@ -58,6 +62,7 @@
         },
         {
             "id": "5",
+            "category": "Óculos",
             "colors": {
                 "Dourado": "#c4ae08",
                 "Marrom": "#78513e",
@@ -72,6 +77,7 @@
         },
         {
             "id": "6",
+            "category": "Bolsas",
             "colors": {
                 "Bege": "#f7ab8b",
                 "Rosa antigo": "#b3568a",
