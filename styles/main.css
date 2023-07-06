@@ -34,6 +34,10 @@ nav .navbar__left .navbar__links .navbar__links-item a {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 16px;
+  transition: 0.4s ease;
+}
+nav .navbar__left .navbar__links .navbar__links-item a:hover {
+  color: #DAFF01;
 }
 nav .navbar__right form {
   display: flex;
@@ -65,9 +69,11 @@ nav .navbar__right form .submit-search {
   color: #FFFFFF;
   background: transparent;
   padding: 8px 16px;
+  transition: 0.3s ease;
 }
 nav .navbar__right form .submit-search:hover {
-  background-color: rgba(255, 255, 255, 0.368627451);
+  background-color: #DAFF01;
+  color: #212529;
 }
 
 @media (max-width: 900px) {
@@ -155,9 +161,6 @@ nav .navbar__right form .submit-search:hover {
     background: transparent;
     padding: 8px 16px;
   }
-  nav .navbar__right form .submit-search:hover {
-    background-color: rgba(134, 134, 134, 0.1725490196);
-  }
 }
 .swiper {
   width: 100%;
@@ -244,11 +247,11 @@ nav .navbar__right form .submit-search:hover {
   }
 }
 .categorias {
-  padding: 2rem 0;
+  margin-top: 2rem;
 }
 
 .category__card__wrapper {
-  margin-top: 1.5rem;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -303,7 +306,8 @@ nav .navbar__right form .submit-search:hover {
   }
 }
 .produtos {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .produtos__wrapper {
@@ -388,7 +392,7 @@ nav .navbar__right form .submit-search:hover {
 }
 .facilidades {
   background-color: #000000;
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 .facilidades h2 {
   color: #FFFFFF;
@@ -397,7 +401,6 @@ nav .navbar__right form .submit-search:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -434,7 +437,7 @@ nav .navbar__right form .submit-search:hover {
   }
 }
 .newsletter {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .newsletter__wrapper {
