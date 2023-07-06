@@ -254,11 +254,15 @@ nav .navbar__right form .submit-search:hover {
   gap: 2rem;
   flex-wrap: wrap;
 }
-.category__card__wrapper .category__card {
+
+.category__card {
   display: flex;
   flex-direction: column;
+  outline: solid 2px transparent;
+  outline-offset: 4px;
+  transition: 0.2s ease-in-out;
 }
-.category__card__wrapper .category__card__image img {
+.category__card__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -266,15 +270,31 @@ nav .navbar__right form .submit-search:hover {
   -o-object-position: center;
      object-position: center;
 }
-.category__card__wrapper .category__card__title {
+.category__card__title {
   background-color: #000000;
   text-align: center;
   padding: 0.5rem 0;
 }
-.category__card__wrapper .category__card__title span {
+.category__card__title span {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
+}
+.category__card:hover {
+  cursor: pointer;
+  outline: solid 2px #9353FF;
+  outline-offset: 4px;
+}
+.category__card:focus {
+  cursor: pointer;
+  outline: solid 4px rgb(72, 154, 248);
+  box-shadow: 0 0 25px 1px rgb(119, 182, 255);
+}
+
+.category__card.active {
+  outline: solid 2px #9353FF;
+  outline-offset: 4px;
+  transform: scale(1.07);
 }
 
 @media (max-width: 450px) {
