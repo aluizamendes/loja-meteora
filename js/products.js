@@ -13,6 +13,32 @@ async function getProducts() {
     }
 }
 
+// função pra atualizar a lista, o parametro é o array com os produtos
+// renderiza na lista e renderiza o modal de cada produto
+function updateProductList(products) {
+
+    productList.innerHTML = ""
+    products.forEach((product) => renderCard(product))
+
+    const productBtn = document.querySelectorAll("[data-btn-produto]")
+
+    // seleciona os btns de `ver mais` e renderiza o modal do produto
+    productBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+    
+            const cardId = e.target.closest(".produtos__card").id
+            let productSelected = ""
+    
+            products.forEach((product) => {
+                if (product.id == cardId) {
+                    productSelected = product
+                }
+            })
+            showProductModal(productSelected)
+        })
+    })
+}
+
 function renderCard(product) {
     const id = product.id
     const category = product.category
@@ -90,12 +116,8 @@ function renderProductModal(product) {
                                         </div>
                                         `
                                     }).join("")
-                                }
-
-                                
+                                }                               
                             </div>
-
-                            
                         </div>
                         <hr>
                         <div class=product__content__bottom>
