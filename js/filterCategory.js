@@ -10,7 +10,7 @@ async function filtrarCategoria(category) {
 const btnsCategorias = document.querySelectorAll("[data-categoria-btn]")
 
 // salvar o último btn ativo para remover a classe
-let btnAtivo = null
+let currentActiveBtn = null
 
 btnsCategorias.forEach((btn) => {
     btn.addEventListener("click", async (e) => {
@@ -18,22 +18,22 @@ btnsCategorias.forEach((btn) => {
         const btnCategory = btn.id
 
         // se houver um btn ativo remove a classe antes de add no novo btn
-        if (btnAtivo != null) {
-            btnAtivo.classList.remove("active")
+        if (currentActiveBtn != null) {
+            currentActiveBtn.classList.remove("active")
         }
 
-        if (btnAtivo == btn) {
-            btnAtivo.classList.remove("active")
+        if (currentActiveBtn == btn) {
+            currentActiveBtn.classList.remove("active")
 
             const products = await getProducts()
             updateProductList(products)
         }
         
-        if (btnAtivo != btn) {
+        if (currentActiveBtn != btn) {
             btn.classList.add("active")
             filtrarCategoria(btnCategory)
         }
 
-        btnAtivo = btn  
+        currentActiveBtn = btn  
     })
 })

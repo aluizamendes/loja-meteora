@@ -2,14 +2,17 @@ const productList = document.querySelector("[data-lista-produtos]")
 
 async function getProducts() {
     try {
-        const request = await fetch("../loja-meteora/data/products.json")
+        const request = await fetch("./data/products.json") // ../loja-meteora/data/products.json
         const data = await request.json()
         const products = data.products
         //console.log(products)
         return products
     }
     catch(error) {
-        console.log(error)
+        console.log(`Falha na requisicao.\nErro: ${error}`)
+    }
+    finally {
+        console.log(`Operacao concluida`)
     }
 }
 
@@ -160,28 +163,9 @@ function showProductModal(product) {
 // quando a janela é carregada
 window.addEventListener("load", async() => {
 
-    // renderizar os cards
+    // pega os produtos
     const products = await getProducts()
-    products.forEach((product) => renderCard(product))
 
-    // click dos botoes dos cards
-    const productBtn = document.querySelectorAll("[data-btn-produto]")
-
-    productBtn.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-    
-            const cardId = e.target.closest(".produtos__card").id
-            let productSelected = ""
-    
-            // console.log(cardId)
-    
-            products.forEach((product) => {
-                if (product.id == cardId) {
-                    productSelected = product
-                }
-            })
-    
-            showProductModal(productSelected)
-        })
-    })
+    // renderiza
+    updateProductList(products)
 })
