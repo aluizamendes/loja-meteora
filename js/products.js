@@ -2,7 +2,7 @@ const productList = document.querySelector("[data-lista-produtos]")
 
 async function getProducts() {
     try {
-        const request = await fetch("./data/products.json") // ../loja-meteora/data/products.json
+        const request = await fetch("../loja-meteora/data/products.json")
         const data = await request.json()
         const products = data.products
         //console.log(products)
@@ -53,7 +53,7 @@ function renderCard(product) {
     productList.innerHTML += `
         <article class="produtos__card" id="${id}" data-category="${category}" data-card-produto>
             <div class="produtos__card__image">
-                <img src="${image}">
+                <img src="${image}" alt="${title}">
             </div>
             <div class="produtos__card__content">
                 <h4 class="produtos__card__content-title">${title}</h4>
@@ -92,12 +92,12 @@ function renderProductModal(product) {
             <header>
                 <div class="modal__icon"><img src="assets/Desktop/Ícones/check-circle.svg" alt="Icone de check"></div>
                 <div class="modal__title"><h2>Confira detalhes sobre o produto</h2></div>
-                <button data-fechar-modal-produto-btn><img src="assets/Desktop/Ícones/icon-x.svg" alt="Icone fechar modal"></button>
+                <button aria-label="Fechar modal" data-fechar-modal-produto-btn><img src="assets/Desktop/Ícones/icon-x.svg" alt="Icone fechar modal"></button>
             </header>
             <section>
                 <div class="modal__wrapper">
                     <div class="product__image">
-                        <img src="${image}" alt="">
+                        <img src="${image}" alt="${title}">
                     </div>
                     <div class="product__content">
                         <div class=product__content__top>

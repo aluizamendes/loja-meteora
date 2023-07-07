@@ -47,10 +47,13 @@
         outline-offset: 4px;
     }
 
-    &:focus {
-        cursor: pointer;
-        outline: solid 4px rgb(72, 154, 248);
-        box-shadow: 0 0 25px 1px rgb(119, 182, 255);
+    &:focus-visible {
+        border: 2px solid $black-1;
+        outline: solid 3px $white;
+        outline-offset: 1px;
+        border-radius: 4px;
+        padding: 2px;
+        transition: none;
     }
 }
 

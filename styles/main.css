@@ -288,10 +288,13 @@ nav .navbar__right form .submit-search:hover {
   outline: solid 2px #9353FF;
   outline-offset: 4px;
 }
-.category__card:focus {
-  cursor: pointer;
-  outline: solid 4px rgb(72, 154, 248);
-  box-shadow: 0 0 25px 1px rgb(119, 182, 255);
+.category__card:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 3px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  padding: 2px;
+  transition: none;
 }
 
 .category__card.active {
@@ -376,6 +379,13 @@ nav .navbar__right form .submit-search:hover {
 .produtos__card__content button:hover {
   background: #a570ff;
 }
+.produtos__card__content button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
+}
 
 @media (max-width: 900px) {
   .produtos__wrapper {
@@ -418,6 +428,7 @@ nav .navbar__right form .submit-search:hover {
   color: #DAFF01;
   font-weight: 700;
   font-size: 20px;
+  text-transform: uppercase;
 }
 .facilidades .facilidades__card_wrapper .facilidades__card__content-text {
   color: #FFFFFF;
@@ -498,6 +509,13 @@ nav .navbar__right form .submit-search:hover {
 .newsletter__wrapper .newsletter__form button:hover {
   background: #a570ff;
 }
+.newsletter__wrapper .newsletter__form button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
+}
 
 @media (max-width: 900px) {
   .newsletter__wrapper .newsletter__title h3 {
@@ -575,6 +593,13 @@ footer p {
 }
 .modalProduto header button:hover {
   background-color: rgba(255, 255, 255, 0.0901960784);
+}
+.modalProduto header button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
 }
 .modalProduto .modal__wrapper {
   display: grid;
@@ -681,6 +706,13 @@ footer p {
 .modalProduto .modal__wrapper .product__content button:hover {
   background: #a570ff;
 }
+.modalProduto .modal__wrapper .product__content button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
+}
 
 @media (max-width: 450px) {
   .modalProduto .modal__wrapper {
@@ -722,6 +754,13 @@ footer p {
 }
 .modalNewsletter header button:hover {
   background-color: rgba(255, 255, 255, 0.0901960784);
+}
+.modalNewsletter header button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
 }
 .modalNewsletter .modal__wrapper {
   display: flex;

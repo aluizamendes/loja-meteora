@@ -46,6 +46,14 @@ $breakpoint-mobile: 450px;
     &:hover {
         background: $primary-purple-2;
     }
+
+    &:focus-visible {
+        border: 2px solid $black-1;
+        outline: solid 2px $white;
+        outline-offset: 1px;
+        border-radius: 4px;
+        transition: none;
+    }
 }
 
 @mixin modal-general($width) {
@@ -87,6 +95,14 @@ $breakpoint-mobile: 450px;
 
             &:hover {
                 background-color: #ffffff17;
+            }
+
+            &:focus-visible {
+                border: 2px solid $black-1;
+                outline: solid 2px $white;
+                outline-offset: 1px;
+                border-radius: 4px;
+                transition: none;
             }
         }
     }
