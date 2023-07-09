@@ -15,25 +15,23 @@ let currentActiveBtn = null
 btnsCategorias.forEach((btn) => {
     btn.addEventListener("click", async (e) => {
 
-        const btnCategory = btn.id
+        const btnCategory = btn.id     
 
-        // se houver um btn ativo remove a classe antes de add no novo btn
-        if (currentActiveBtn != null) {
-            currentActiveBtn.classList.remove("active")
-        }
+        // remove a classe active se tiver
+        btnsCategorias.forEach((btn) => { if (btn.classList.contains("active")) btn.classList.remove("active") })
 
         if (currentActiveBtn == btn) {
             currentActiveBtn.classList.remove("active")
 
             const products = await getProducts()
             updateProductList(products)
-        }
+            currentActiveBtn = null
         
-        if (currentActiveBtn != btn) {
+        } else {
             btn.classList.add("active")
+            
             filtrarCategoria(btnCategory)
+            currentActiveBtn = btn
         }
-
-        currentActiveBtn = btn  
     })
 })
