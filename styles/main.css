@@ -39,6 +39,10 @@ nav .navbar__left .navbar__links .navbar__links-item a {
 nav .navbar__left .navbar__links .navbar__links-item a:hover {
   color: #DAFF01;
 }
+nav .navbar__right {
+  display: flex;
+  gap: 16px;
+}
 nav .navbar__right form {
   display: flex;
   gap: 1rem;
@@ -74,6 +78,21 @@ nav .navbar__right form .submit-search {
 nav .navbar__right form .submit-search:hover {
   background-color: #DAFF01;
   color: #212529;
+}
+nav .navbar__right button {
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav .navbar__right button:hover {
+  background-color: rgba(255, 255, 255, 0.1764705882);
+}
+nav .navbar__right button:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
 }
 
 @media (max-width: 900px) {
@@ -702,6 +721,9 @@ footer p {
   width: -moz-fit-content;
   width: fit-content;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .modalProduto .modal__wrapper .product__content button:hover {
   background: #a570ff;

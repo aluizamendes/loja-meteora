@@ -2,7 +2,7 @@ const productList = document.querySelector("[data-lista-produtos]")
 
 async function getProducts() {
     try {
-        const request = await fetch("../loja-meteora/data/products.json")
+        const request = await fetch("./data/products.json")
         const data = await request.json()
         const products = data.products
         //console.log(products)
@@ -138,7 +138,10 @@ function renderProductModal(product) {
                                 }
                             </div>                                
                         </div>
-                        <button>Adicionar à sacola</button>
+                        <button>
+                            <img src="./assets/Desktop/Ícones/Add_shopping_cart.svg" alt="Ícone adicionar ao carrinho de compras"> 
+                            <span>Adicionar à sacola</span> 
+                        </button>
                     </div>
                 </div>
             </section>

@@ -103,6 +103,9 @@
 
             button {
                 @include primary-btn($primary-purple, $white);
+                display: flex;
+                align-items: center;
+                gap: 8px;
             }
         }
     }

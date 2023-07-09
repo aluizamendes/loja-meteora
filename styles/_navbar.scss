@@ -50,6 +50,9 @@ nav {
     }
 
     .navbar__right {
+        display: flex;
+        gap: 16px;
+
         form {
             display: flex;
             gap: 1rem;
@@ -80,6 +83,24 @@ nav {
                     background-color: $primary-yellow;
                     color: $black-2;
                 }
+            }
+        }
+
+        button {
+            padding: 6px;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                background-color: #ffffff2d;
+            }
+
+            &:focus-visible {
+                border: 2px solid $black-1;
+                outline: solid 2px $white;
+                outline-offset: 1px;
+                border-radius: 4px;
+                transition: none;
             }
         }
     }
