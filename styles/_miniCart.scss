@@ -1,0 +1,177 @@
+@import 'variables';
+
+.minicart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: $white;
+    height: 100%;
+    border-left: 1px solid $grey-2;
+    z-index: 9999;
+    transform: translateX(480px); // esconde a section
+    transition: .3s ease-in-out;
+
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 80vh;
+        padding: 24px 24px 24px 24px;
+        overflow-y: scroll;
+
+        // estilos da scrollbar
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgb(235, 235, 235);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            border-radius: 30px;
+        }
+    }
+
+    &__content {
+        // padding: 24px;
+        display: flex;
+        flex-direction: column;
+        
+        &-infos {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 24px;
+        }
+
+        hr {
+            // margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background-color: $grey-3;
+            width: 100%;
+            height: 1px;
+        }
+
+        &-card {
+            display: flex;
+            gap: 8px;
+
+            border: 1px solid $grey-3;
+            background: $white;
+
+            .image {
+                overflow: hidden;
+                width: 100px;
+                aspect-ratio: 1 / 1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .infos {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                flex-grow: 1;
+
+                padding: 8px;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+
+            .remove-from-cart-btn {
+                @include primary-btn(#f0f0f0, $black-2);
+                margin: 8px;
+                height: 25px;
+            }
+        }
+
+        
+    }
+}
+
+.minicart.open {
+    width: 450px;
+    box-shadow: -2px 0px 24px 4px #0c15207c;
+}
+
+.minicart__wrapper {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        background-color: $black-1;
+        padding: 1rem 1.5rem;
+
+        h2 {
+            color: $white;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 4px;
+        }
+    }
+
+    .minicart__bottom {
+        position: fixed;
+        // width: 100%;
+        bottom: 0px;
+        background-color: $white;
+        box-shadow: 0 0 24px rgba(11, 21, 43, 0.425);
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 20px;
+
+        .checkout-btn {
+            @include primary-btn($primary-purple, $white);
+            text-align: center;
+            flex-grow: 1;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .sacola-btn {
+            @include outline-btn($black-1);
+            text-align: center;
+            flex-grow: 1;
+            text-transform: uppercase;
+            font-size: 14px
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    z-index: 99;
+    transition: .5s ease-in-out;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}

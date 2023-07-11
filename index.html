@@ -36,11 +36,41 @@
                         <input class="submit-search" type="button" value="Buscar">
                     </form>
                     <button><img src="./assets/Desktop/Ícones/Account_circle.svg" alt="Ícone conta do usuário"></button>
-                    <button><img src="./assets/Desktop/Ícones/Shopping_cart.svg" alt="Ícone carrinho de compras"></button>
+                    <button data-shopping-cart-btn><img src="./assets/Desktop/Ícones/Shopping_cart.svg" alt="Ícone carrinho de compras"></button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- drawer carrinho de compras -->
+    <section class="minicart" data-shopping-cart-list-section>
+        <div class="minicart__wrapper">
+            <header>
+                <h2>Meu carrinho</h2>
+                <button data-close-shopping-cart-list>
+                    <img src="assets/Desktop/Ícones/icon-x.svg" alt="Ícone fechar">
+                </button>
+            </header>
+
+            <div class="minicart__content">
+                <div class="minicart__content-infos">
+                    <span data-cart-list-items></span>
+                    <span data-cart-list-items-total-price></span>
+                </div>
+                <hr>
+
+                <div class="minicart__lista" data-shopping-cart-list></div>
+            </div>
+
+            <div class="minicart__bottom" data-minicart-bottom>
+                <button class="sacola-btn">Ver sacola</button>
+                <button class="checkout-btn">Finalizar compra</button>
+            </div>
+            
+        </div>
+    </section>
+    <div id="overlay" class="overlay"></div>
+    <!-- fim drawer -->
 
     <header>
         <section class="hero-banner">
@@ -200,5 +230,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/filterCategory.js"></script>
+    <script src="js/miniCart.js"></script>
 </body>
 </html>

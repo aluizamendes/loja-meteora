@@ -795,6 +795,205 @@ footer p {
   font-weight: 500;
 }
 
+.minicart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+  border-left: 1px solid #CCCCCC;
+  z-index: 9999;
+  transform: translateX(480px);
+  transition: 0.3s ease-in-out;
+}
+.minicart__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 80vh;
+  padding: 24px 24px 24px 24px;
+  overflow-y: scroll;
+}
+.minicart__lista::-webkit-scrollbar {
+  width: 6px;
+}
+.minicart__lista::-webkit-scrollbar-track {
+  background-color: rgb(235, 235, 235);
+}
+.minicart__lista::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 30px;
+}
+.minicart__content {
+  display: flex;
+  flex-direction: column;
+}
+.minicart__content-infos {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+.minicart__content hr {
+  border: none;
+  outline: none;
+  background-color: #CED4DA;
+  width: 100%;
+  height: 1px;
+}
+.minicart__content-card {
+  display: flex;
+  gap: 8px;
+  border: 1px solid #CED4DA;
+  background: #FFFFFF;
+}
+.minicart__content-card .image {
+  overflow: hidden;
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.minicart__content-card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.minicart__content-card .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  padding: 8px;
+}
+.minicart__content-card .infos span {
+  font-size: 14px;
+}
+.minicart__content-card .remove-from-cart-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.457px;
+  cursor: pointer;
+  outline: none;
+  color: #212529;
+  background: #f0f0f0;
+  padding: 8px 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.4s;
+  margin: 8px;
+  height: 25px;
+}
+.minicart__content-card .remove-from-cart-btn:hover {
+  background: #a570ff;
+}
+.minicart__content-card .remove-from-cart-btn:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
+}
+
+.minicart.open {
+  width: 450px;
+  box-shadow: -2px 0px 24px 4px rgba(12, 21, 32, 0.4862745098);
+}
+
+.minicart__wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.minicart__wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #000000;
+  padding: 1rem 1.5rem;
+}
+.minicart__wrapper header h2 {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+}
+.minicart__wrapper header button {
+  cursor: pointer;
+  padding: 4px;
+}
+.minicart__wrapper .minicart__bottom {
+  position: fixed;
+  bottom: 0px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(11, 21, 43, 0.425);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 20px;
+}
+.minicart__wrapper .minicart__bottom .checkout-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.457px;
+  cursor: pointer;
+  outline: none;
+  color: #FFFFFF;
+  background: #9353FF;
+  padding: 8px 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.4s;
+  text-align: center;
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.minicart__wrapper .minicart__bottom .checkout-btn:hover {
+  background: #a570ff;
+}
+.minicart__wrapper .minicart__bottom .checkout-btn:focus-visible {
+  border: 2px solid #000000;
+  outline: solid 2px #FFFFFF;
+  outline-offset: 1px;
+  border-radius: 4px;
+  transition: none;
+}
+.minicart__wrapper .minicart__bottom .sacola-btn {
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #000000;
+  color: #000000;
+  background: transparent;
+  padding: 8px 16px;
+  text-align: center;
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  z-index: 99;
+  transition: 0.5s ease-in-out;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
