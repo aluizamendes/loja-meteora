@@ -2,14 +2,14 @@ const productList = document.querySelector("[data-lista-produtos]")
 
 async function getProducts() {
     try {
-        const request = await fetch("./data/products.json")
+        const request = await fetch("../loja-meteora/data/products.json")
         const data = await request.json()
         const products = data.products
         //console.log(products)
         return products
     }
     catch(error) {
-        console.log(`Falha na requisicao.\nErro: ${error}`)
+        console.log(`Falha na requisicao. Tente novamente.\nErro: ${error}`)
     }
     finally {
         console.log(`Operacao concluida`)
@@ -99,7 +99,7 @@ function renderProductModal(product) {
                     <div class="product__image">
                         <img src="${image}" alt="${title}">
                     </div>
-                    <div class="product__content">
+                    <form class="product__content">
                         <div class=product__content__top>
                             <span class=product__content__top-title>${title}</span>
                             <span class=product__content__top-description>${description}</span>
@@ -114,7 +114,7 @@ function renderProductModal(product) {
                                     colorMap.map((color) => {
                                         return `
                                         <div class="radio-field">
-                                            <input type="radio" name="cor" id="${ color.name.split(" ").join("") }" style="background-color: ${ color.colorValue };">
+                                            <input type="radio" required name="cor" value="${ color.name }" id="${ color.name.split(" ").join("") }" style="background-color: ${ color.colorValue };">
                                             <label for="${ color.name.split(" ").join("") }">${ color.name }</label>
                                         </div>
                                         `
@@ -130,7 +130,7 @@ function renderProductModal(product) {
                                     sizes.map((size) => {
                                         return`
                                         <div class="radio-field">
-                                            <input type="radio" name="tamanho" id="${size}">
+                                            <input type="radio" required name="tamanho" value="${ size }" id="${size}">
                                             <label for="${size}">${size}</label>
                                         </div>
                                         `
@@ -138,11 +138,11 @@ function renderProductModal(product) {
                                 }
                             </div>                                
                         </div>
-                        <button>
+                        <button type="submit" data-add-to-cart-btn>
                             <img src="./assets/Desktop/Ícones/Add_shopping_cart.svg" alt="Ícone adicionar ao carrinho de compras"> 
-                            <span>Adicionar à sacola</span> 
+                            <span>Adicionar à sacola</span>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </section>
         </dialog>
@@ -155,12 +155,59 @@ function showProductModal(product) {
     // seleciona elementos
     const productModal = document.querySelector("[data-modal-produto]")
     const closeProductModalBtn = document.querySelector("[data-fechar-modal-produto-btn]")
+    const addToCartBtn = document.querySelector("[data-add-to-cart-btn]")
+    const inputsRadioElements = document.querySelectorAll(".radio-field input")
+    const inputsRadio = [...inputsRadioElements]
 
     // abrir modal
     productModal.showModal()
 
     // fechar modal
-    closeProductModalBtn.addEventListener("click", () => productModal.close())    
+    closeProductModalBtn.addEventListener("click", () => productModal.close())
+
+    // separar os tipos de input
+    let inputsColor = []
+    let inputsSize = []
+
+    inputsRadio.forEach((input) => {
+        if (input.name == "cor") {
+            inputsColor.push(input)
+        } else {
+            inputsSize.push(input)
+        }
+    })
+    
+    // implementa a adição do produto no carrinho
+    addToCartBtn.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        let inputsColorAreEmpty = inputsColor.every((input) => input.checked == false)
+        let inputsSizeAreEmpty = inputsSize.every((input) => input.checked == false)
+
+        if (inputsColorAreEmpty || inputsSizeAreEmpty) {
+            // não adiciona
+            console.log("É necessário escolher cor e tamanho.")
+        
+        } else {
+            // add no carrinho
+            let colorSelected
+            let sizeSelected
+            const novoID = shoppingCartList[shoppingCartList.length - 1] ? parseInt((shoppingCartList[shoppingCartList.length - 1]).novoID) + 1 : 0
+
+            inputsColor.forEach((input) => input.checked ? colorSelected = input.value : "")
+            inputsSize.forEach((input) => input.checked ? sizeSelected = input.value : "")
+
+            const item = { ...product, colorSelected, sizeSelected, novoID: novoID.toString() }
+            shoppingCartList.push(item)
+
+            updateShoppingCart()
+            localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartList))
+
+            // fechar modal e abrir carrinho
+            productModal.close()
+            setTimeout(openShoppingCart, 0)
+        }        
+    })
 }
 
 // quando a janela é carregada
@@ -171,4 +218,5 @@ window.addEventListener("load", async() => {
 
     // renderiza
     updateProductList(products)
+    updateShoppingCart()
 })
