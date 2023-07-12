@@ -1,10 +1,11 @@
 <h1 align="center">
-    <img width="300px" src="https://raw.githubusercontent.com/aluizamendes/loja-meteora/main/public/Logo-readme.png" alt="logo meteora">
+  <br>
+  <img width="300px" src="https://raw.githubusercontent.com/aluizamendes/loja-meteora/main/public/Logo-readme.png" alt="logo meteora">
   <br>
   Meteora - Alura Challenge Front-End 7ª Edição
   <br>
 </h1>
-
+<br>
 <div align="center">
     <img src="https://raw.githubusercontent.com/aluizamendes/loja-meteora/main/public/preview.gif" alt="demo site meteora">
 </div>
