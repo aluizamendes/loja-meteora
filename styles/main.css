@@ -1,53 +1,55 @@
-nav {
+.navbar__wrapper {
   background-color: #000000;
   position: sticky;
   top: 0;
+  padding: 10px 5%;
   display: flex;
   align-items: center;
-  height: 70px;
+  justify-content: center;
   z-index: 2;
 }
-nav .navbar {
+.navbar__wrapper .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
-nav .navbar__left {
+.navbar__wrapper .navbar__left {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-nav .navbar__left .mobile-menu {
+.navbar__wrapper .navbar__left .mobile-menu {
   display: none;
 }
-nav .navbar__left .navbar__links {
+.navbar__wrapper .navbar__left nav .navbar__links {
   display: flex;
   gap: 32px;
 }
-nav .navbar__left .navbar__links .close-menu-btn {
+.navbar__wrapper .navbar__left nav .navbar__links .close-menu-btn {
   display: none;
 }
-nav .navbar__left .navbar__links .navbar__links-item {
+.navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item {
   list-style: none;
 }
-nav .navbar__left .navbar__links .navbar__links-item a {
+.navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item a {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 16px;
   transition: 0.4s ease;
 }
-nav .navbar__left .navbar__links .navbar__links-item a:hover {
+.navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item a:hover {
   color: #DAFF01;
 }
-nav .navbar__right {
+.navbar__wrapper .navbar__right {
   display: flex;
   gap: 16px;
 }
-nav .navbar__right form {
+.navbar__wrapper .navbar__right form {
   display: flex;
   gap: 1rem;
 }
-nav .navbar__right form .search-bar {
+.navbar__wrapper .navbar__right form .search-bar {
   width: 100%;
   border-radius: 0;
   outline: none;
@@ -56,16 +58,16 @@ nav .navbar__right form .search-bar {
   font-family: "Inter", sans-serif;
   color: #000000;
 }
-nav .navbar__right form .search-bar::-moz-placeholder {
+.navbar__wrapper .navbar__right form .search-bar::-moz-placeholder {
   color: #6C757D;
 }
-nav .navbar__right form .search-bar::placeholder {
+.navbar__wrapper .navbar__right form .search-bar::placeholder {
   color: #6C757D;
 }
-nav .navbar__right form .search-bar:focus {
+.navbar__wrapper .navbar__right form .search-bar:focus {
   outline: 3px solid rgba(255, 255, 255, 0.368627451);
 }
-nav .navbar__right form .submit-search {
+.navbar__wrapper .navbar__right form .submit-search {
   font-family: "Inter", sans-serif;
   cursor: pointer;
   outline: none;
@@ -75,19 +77,27 @@ nav .navbar__right form .submit-search {
   padding: 8px 16px;
   transition: 0.3s ease;
 }
-nav .navbar__right form .submit-search:hover {
+.navbar__wrapper .navbar__right form .submit-search:hover {
   background-color: #DAFF01;
   color: #212529;
 }
-nav .navbar__right button {
+.navbar__wrapper .navbar button {
   padding: 6px;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s;
 }
-nav .navbar__right button:hover {
+.navbar__wrapper .navbar button svg path {
+  fill: #FFFFFF;
+}
+.navbar__wrapper .navbar button:hover {
   background-color: rgba(255, 255, 255, 0.1764705882);
 }
-nav .navbar__right button:focus-visible {
+.navbar__wrapper .navbar button:focus-visible {
   border: 2px solid #000000;
   outline: solid 2px #FFFFFF;
   outline-offset: 1px;
@@ -96,82 +106,84 @@ nav .navbar__right button:focus-visible {
 }
 
 @media (max-width: 900px) {
-  nav {
-    background-color: #FFFFFF;
-    height: 130px;
+  .navbar__wrapper {
+    padding: 0;
   }
-  nav .navbar {
+  .navbar__wrapper .navbar {
     flex-direction: column;
   }
-  nav .navbar__left {
+  .navbar__wrapper .navbar__left {
     width: 100%;
+    padding: 10px 16px;
     justify-content: space-between;
-    background-color: #000000;
   }
-  nav .navbar__left::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 62px;
-    left: 0;
-    top: 0;
-    background-color: #000000;
-    z-index: -1;
-  }
-  nav .navbar__left .mobile-menu {
+  .navbar__wrapper .navbar__left .mobile-menu {
     display: block;
     padding: 0.3rem;
     cursor: pointer;
   }
-  nav .navbar__left .navbar__links {
-    position: fixed;
+  .navbar__wrapper .navbar__left nav {
     background-color: #212529;
+    display: block;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
-    transform: translateX(700px);
+    transform: translateX(500px);
+    z-index: 9999;
+    color: white;
+    visibility: hidden;
+    transition: 0.6s ease;
+  }
+  .navbar__wrapper .navbar__left nav .navbar__links {
     display: flex;
     gap: 2rem;
     flex-direction: column;
     align-items: center;
-    visibility: hidden;
-    transition: 1s;
   }
-  nav .navbar__left .navbar__links .close-menu-btn {
-    display: block;
+  .navbar__wrapper .navbar__left nav .navbar__links .close-menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     cursor: pointer;
     margin-top: 1.3rem;
     margin-left: auto;
     margin-right: 2rem;
   }
-  nav .navbar__left .navbar__links .navbar__links-item {
+  .navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item {
     text-align: center;
     width: 100%;
   }
-  nav .navbar__left .navbar__links .navbar__links-item a {
+  .navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item a {
     display: inline-block;
     font-size: 1.5rem;
     padding: 2rem 1rem;
     border-bottom: 1px solid transparent;
     transition: 0.4s;
   }
-  nav .navbar__left .navbar__links .navbar__links-item a:hover {
+  .navbar__wrapper .navbar__left nav .navbar__links .navbar__links-item a:hover {
     border-bottom: 1px solid #EE6471;
   }
-  nav .navbar__left .navbar__links.active {
+  .navbar__wrapper .navbar__left nav.active {
     opacity: 1;
     transform: translateX(0);
     visibility: visible;
   }
-  nav .navbar__right {
-    margin-top: 1.5rem;
-    background-color: #FFFFFF;
+  .navbar__wrapper .navbar__right {
     width: 100%;
+    background-color: #FFFFFF;
+    padding: 16px;
   }
-  nav .navbar__right form .submit-search {
+  .navbar__wrapper .navbar__right form {
+    flex-grow: 1;
+  }
+  .navbar__wrapper .navbar__right form .search-bar {
+    padding: 0px 10px;
+  }
+  .navbar__wrapper .navbar__right form .submit-search {
     font-family: "Inter", sans-serif;
     cursor: pointer;
     outline: none;
@@ -179,6 +191,12 @@ nav .navbar__right button:focus-visible {
     color: #000000;
     background: transparent;
     padding: 8px 16px;
+  }
+  .navbar__wrapper .navbar__right button {
+    padding: 2px;
+  }
+  .navbar__wrapper .navbar__right button svg path {
+    fill: #212529;
   }
 }
 .swiper {
