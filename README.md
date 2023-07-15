@@ -1,6 +1,7 @@
 <h1 align="center">
   <img width="300px" src="https://raw.githubusercontent.com/aluizamendes/loja-meteora/main/public/Logo-readme.png" alt="logo meteora">
   <br>
+  <br>
   Meteora - Alura Challenge Front-End 7ª Edição
   <br>
 </h1>
@@ -18,8 +19,12 @@
 
 ## Sobre o desafio
 
-Esse projeto é o resultado da minha participação no Challenge Front-end 7ª Edição da Alura, que consiste no desenvolvimento da página de uma loja fictícia chamada Meteora. A Meteora é uma empresa do comércio eletrônico de roupas atemporais, casuais e sem gênero. Ela acredita que a moda é muito mais do que apenas tendências passageiras e oferece peças versáteis que se adaptam a qualquer estilo e ocasião.    
+<p>
+Esse projeto é o resultado da minha participação no Challenge Front-end 7ª Edição da Alura, que consiste no desenvolvimento da página de uma loja fictícia chamada Meteora. A Meteora é uma empresa do comércio eletrônico de roupas atemporais, casuais e sem gênero. Ela acredita que a moda é muito mais do que apenas tendências passageiras e oferece peças versáteis que se adaptam a qualquer estilo e ocasião.
+</p>
+<p>
 O código foi desenvolvido por mim e o design foi fornecido pelos instrutores através de um arquivo no Figma. O desafio dura 4 semanas e a cada semana foi disponibilizado um arquivo no Trello para registrar o andamento das tarefas do projeto. Não é fornecido nenhum código pronto ou base, apenas o design no Figma e os alunos ficam livres para implementar o código da maneira que desejar, e até fazer features a mais.
+</p>
 
 ## Features
 
@@ -44,4 +49,4 @@ $ cd loja-meteora
 ```
 
 ## Deploy
-Acesse pela ULR: https://aluizamendes.github.io/loja-meteora/
+Acesse pelo link: https://aluizamendes.github.io/loja-meteora/
