@@ -828,7 +828,7 @@ footer p {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 80vh;
+  height: 450px;
   padding: 24px 24px 24px 24px;
   overflow-y: scroll;
 }
@@ -944,7 +944,7 @@ footer p {
   padding: 4px;
 }
 .minicart__wrapper .minicart__bottom {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   background-color: #FFFFFF;
   box-shadow: 0 0 24px rgba(11, 21, 43, 0.425);

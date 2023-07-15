@@ -27,11 +27,15 @@ function updateTotalPrice() {
 
 // abre lista
 function openShoppingCart() {
-    if (window.innerWidth < 1200) listWidth = 400
+    const windowHeight = window.innerHeight
+    const windowWidth = window.innerWidth
+
+    if (windowWidth < 500) listWidth = 320
 
     cartListSection.style.width = listWidth + "px"
     cartListSection.style.setProperty("transform", "translateX(0px)")
     cartListSection.style.boxShadow = "-2px 0px 24px 4px #0c15207c"
+    cartList.style.height =  (windowHeight - 200) + "px"
     overlay.classList.add("active")
     carrinhoBottomEl.style.width = listWidth + "px"
     document.body.style.overflow = 'hidden';
@@ -46,7 +50,7 @@ function closeShoppingCart() {
 }
 
 document.addEventListener("click", (e) => {
-    let windowWidth = window.innerWidth
+    const windowWidth = window.innerWidth
     let listSpace = parseFloat(windowWidth - listWidth)
 
     if (e.pageX < listSpace) {

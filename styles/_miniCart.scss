@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-        height: 80vh;
+        height: 450px;
         padding: 24px 24px 24px 24px;
         overflow-y: scroll;
 
@@ -131,7 +131,7 @@
     }
 
     .minicart__bottom {
-        position: fixed;
+        position: absolute;
         // width: 100%;
         bottom: 0px;
         background-color: $white;
