@@ -1012,6 +1012,43 @@ footer p {
   opacity: 1;
 }
 
+@media (max-width: 450px) {
+  .minicart__content-card {
+    gap: 4px;
+  }
+  .minicart__content-card .image {
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 70px;
+  }
+  .minicart__content-card .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .minicart__content-card .infos {
+    gap: 4px;
+    padding: 4px;
+  }
+  .minicart__content-card .infos h4 {
+    font-size: 14px;
+  }
+  .minicart__content-card .infos span {
+    font-size: 12px;
+  }
+  .minicart__content-card .remove-from-cart-btn {
+    margin: 4px;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
