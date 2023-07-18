@@ -6,6 +6,7 @@
     top: 0;
     background-color: $white;
     height: 100%;
+    width: 430px;
     border-left: 1px solid $grey-2;
     z-index: 9999;
     transform: translateX(480px); // esconde a section
@@ -30,6 +31,30 @@
         &::-webkit-scrollbar-thumb {
             background-color: darkgrey;
             border-radius: 30px;
+        }
+
+        &__empty {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-grow: 1;
+
+            text-align: center;
+
+            &-image {
+                max-width: 50%;
+                margin-bottom: 20px;
+            }
+            &-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: $black-2;
+            }
+            &-subtitle {
+                color: $grey-1;
+            }
         }
     }
 

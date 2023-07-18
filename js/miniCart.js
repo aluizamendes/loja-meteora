@@ -79,12 +79,25 @@ function renderShoppingCartListItem(item) {
 
 // atualiza
 function updateShoppingCart() {
+    updateTotalPrice()
+    updateTotalItems()
+
+    if (shoppingCartList.length === 0) {
+        console.log("O carrinho está vazio")
+        cartList.innerHTML = `
+            <div class="minicart__lista__empty">
+                <img class="minicart__lista__empty-image" src="../assets/empty-cart.png" alt="Carrinho de compras vazio">
+                <p class="minicart__lista__empty-title">Seu carrinho está vazio!</p>
+                <p class="minicart__lista__empty-subtitle">Para adicionar produtos basta navegar pela loja e adicionar o item desejado na sacola :)</p>
+            </div>
+        `
+        return
+    }
+
     cartList.innerHTML = ""
 
     //renderiza
     shoppingCartList.forEach((item) => renderShoppingCartListItem(item))
-    updateTotalPrice()
-    updateTotalItems()
 
     const removeItemBtn = document.querySelectorAll("[data-remove-from-cart-btn]")
 

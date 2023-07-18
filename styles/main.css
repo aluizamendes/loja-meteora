@@ -819,6 +819,7 @@ footer p {
   top: 0;
   background-color: #FFFFFF;
   height: 100%;
+  width: 430px;
   border-left: 1px solid #CCCCCC;
   z-index: 9999;
   transform: translateX(480px);
@@ -841,6 +842,27 @@ footer p {
 .minicart__lista::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 30px;
+}
+.minicart__lista__empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  text-align: center;
+}
+.minicart__lista__empty-image {
+  max-width: 50%;
+  margin-bottom: 20px;
+}
+.minicart__lista__empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+}
+.minicart__lista__empty-subtitle {
+  color: #6C757D;
 }
 .minicart__content {
   display: flex;
