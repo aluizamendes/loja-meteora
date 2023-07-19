@@ -21,7 +21,7 @@
         .product__content {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 16px;
             justify-content: space-between;
 
             hr {
@@ -67,6 +67,9 @@
             }
 
             &__middle, &__bottom {
+                display: flex;
+                flex-direction: column;
+
                 &-title {
                     font-size: 14px;
                     font-weight: 700;
@@ -74,7 +77,7 @@
                     color: $black-2;
                 }
 
-                div {
+                &-wrapper {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 1.2rem;
@@ -99,6 +102,13 @@
                         }
                     }
                 }
+            }
+
+            &__footer {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding-top: 8px;
             }
 
             button {

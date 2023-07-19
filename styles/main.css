@@ -655,7 +655,7 @@ footer p {
 .modalProduto .modal__wrapper .product__content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   justify-content: space-between;
 }
 .modalProduto .modal__wrapper .product__content hr {
@@ -696,26 +696,30 @@ footer p {
   color: #ADB5BD;
   font-size: 13px;
 }
+.modalProduto .modal__wrapper .product__content__middle, .modalProduto .modal__wrapper .product__content__bottom {
+  display: flex;
+  flex-direction: column;
+}
 .modalProduto .modal__wrapper .product__content__middle-title, .modalProduto .modal__wrapper .product__content__bottom-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 23px;
   color: #212529;
 }
-.modalProduto .modal__wrapper .product__content__middle div, .modalProduto .modal__wrapper .product__content__bottom div {
+.modalProduto .modal__wrapper .product__content__middle-wrapper, .modalProduto .modal__wrapper .product__content__bottom-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
   margin-top: 0.4rem;
 }
-.modalProduto .modal__wrapper .product__content__middle div .radio-field, .modalProduto .modal__wrapper .product__content__bottom div .radio-field {
+.modalProduto .modal__wrapper .product__content__middle-wrapper .radio-field, .modalProduto .modal__wrapper .product__content__bottom-wrapper .radio-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
-.modalProduto .modal__wrapper .product__content__middle div .radio-field input, .modalProduto .modal__wrapper .product__content__bottom div .radio-field input {
+.modalProduto .modal__wrapper .product__content__middle-wrapper .radio-field input, .modalProduto .modal__wrapper .product__content__bottom-wrapper .radio-field input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -723,8 +727,14 @@ footer p {
   border-radius: 50%;
   border: 0.6px solid #CED4DA;
 }
-.modalProduto .modal__wrapper .product__content__middle div .radio-field input:checked, .modalProduto .modal__wrapper .product__content__bottom div .radio-field input:checked {
+.modalProduto .modal__wrapper .product__content__middle-wrapper .radio-field input:checked, .modalProduto .modal__wrapper .product__content__bottom-wrapper .radio-field input:checked {
   box-shadow: inset 0px 0px 0px 5px #9353FF;
+}
+.modalProduto .modal__wrapper .product__content__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
 }
 .modalProduto .modal__wrapper .product__content button {
   font-family: "Inter", sans-serif;

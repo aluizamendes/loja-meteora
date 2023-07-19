@@ -100,16 +100,16 @@ function renderProductModal(product) {
                         <img src="${image}" alt="${title}">
                     </div>
                     <form class="product__content">
-                        <div class=product__content__top>
-                            <span class=product__content__top-title>${title}</span>
-                            <span class=product__content__top-description>${description}</span>
-                            <span class=product__content__top-price>R$ ${price}</span>
-                            <span class=product__content__top-seller>Vendido e entregue por Riachuelo</span>
+                        <div class="product__content__top">
+                            <span class="product__content__top-title">${title}</span>
+                            <span class="product__content__top-description">${description}</span>
+                            <span class="product__content__top-price">R$ ${price}</span>
+                            <span class="product__content__top-seller">Vendido e entregue por Riachuelo</span>
                         </div>
                         <hr>
-                        <div class=product__content__middle>
-                            <span class=product__content__middle-title>Cores:</span>
-                            <div>
+                        <div class="product__content__middle">
+                            <span class="product__content__middle-title">Cores:</span>
+                            <div class="product__content__middle-wrapper">
                                 ${
                                     colorMap.map((color) => {
                                         return `
@@ -123,9 +123,9 @@ function renderProductModal(product) {
                             </div>
                         </div>
                         <hr>
-                        <div class=product__content__bottom>
-                            <span class=product__content__bottom-title>Tamanho:</span>
-                            <div>
+                        <div class="product__content__bottom">
+                            <span class="product__content__bottom-title">Tamanho:</span>
+                            <div class="product__content__middle-wrapper">
                                 ${
                                     sizes.map((size) => {
                                         return`
@@ -136,12 +136,18 @@ function renderProductModal(product) {
                                         `
                                     }).join("")
                                 }
-                            </div>                                
+                            </div>
+
+                            <div class="product__content__footer">
+                                <div class="product__content__bottom-helper" data-info-text-modal></div>
+                                <button type="submit" data-add-to-cart-btn>
+                                    <img src="./assets/Desktop/Ícones/Add_shopping_cart.svg" alt="Ícone adicionar ao carrinho de compras"> 
+                                    <span>Adicionar à sacola</span>
+                                </button>                  
+                            </div>
                         </div>
-                        <button type="submit" data-add-to-cart-btn>
-                            <img src="./assets/Desktop/Ícones/Add_shopping_cart.svg" alt="Ícone adicionar ao carrinho de compras"> 
-                            <span>Adicionar à sacola</span>
-                        </button>
+                        
+
                     </form>
                 </div>
             </section>
@@ -180,13 +186,15 @@ function showProductModal(product) {
     // implementa a adição do produto no carrinho
     addToCartBtn.addEventListener("click", (e) => {
         e.preventDefault()
+        const infoText = document.querySelector("[data-info-text-modal]")
 
         let inputsColorAreEmpty = inputsColor.every((input) => input.checked == false)
         let inputsSizeAreEmpty = inputsSize.every((input) => input.checked == false)
 
         if (inputsColorAreEmpty || inputsSizeAreEmpty) {
             // não adiciona
-            console.log("É necessário escolher cor e tamanho.")
+            infoText.style.color = "red"
+            infoText.innerText = "É necessário escolher cor e tamanho."
         
         } else {
             // add no carrinho
