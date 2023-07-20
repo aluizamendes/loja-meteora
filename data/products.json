@@ -6,6 +6,8 @@
             "colors": {
                 "Mostarda": "#e69d1e",
                 "Azul claro": "#6eaaff",
+                "Lilás": "#dec4ff",
+                "Rosa": "#ffabd9",
                 "OffWhite": "#f0f2f5",
                 "Preto": "#000",
                 "Mescla": "#999999"
@@ -88,6 +90,50 @@
             "imageURL": "assets/Desktop/Imagens Cards/Bolsa.png",
             "title": "Bolsa coringa",
             "description": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
+            "price": "120"    
+        },
+        {
+            "id": "7",
+            "category": "Casacos",
+            "colors": {
+                "Amarelo neon": "#d7ff26",
+                "Branco": "#FFF",
+                "Preto": "#000"
+            },
+            "size": ["PP", "P", "M", "G", "GG", "XGG"],
+            "imageURL": "assets/Desktop/Imagens Cards/Jaqueta_puffer.jpg",
+            "title": "Jaqueta Puffer",
+            "description": "Jaqueta puffer em couro sintético, ideal para compor um look moderno e descolado. Modelo unissex.",
+            "price": "359"    
+        },
+        {
+            "id": "8",
+            "category": "Bolsas",
+            "colors": {
+                "Bege": "#f7ab8b",
+                "Azul claro": "#8fe7ff",
+                "Branco": "#FFF",
+                "Preto": "#000"
+            },
+            "size": ["Único"],
+            "imageURL": "assets/Desktop/Imagens Cards/Mochila.jpg",
+            "title": "Mochila Casual",
+            "description": "Mochila compartimentada com tamanho ideal para o seu dia a dia.",
+            "price": "199"    
+        },
+        {
+            "id": "9",
+            "category": "Óculos",
+            "colors": {
+                "Rosé": "#ffadb7",
+                "Azul": "#270fff",
+                "Ciano": "#1ff0ff",
+                "Laranja": "#ff9a17"                
+            },
+            "size": ["Único"],
+            "imageURL": "assets/Desktop/Imagens Cards/Oculos_colorido.jpg",
+            "title": "Óculos Colorido",
+            "description": "Lentes espelhadas em cores diversas. Modelo unissex.",
             "price": "120"    
         }
     ]
