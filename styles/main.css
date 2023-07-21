@@ -507,18 +507,16 @@
 .newsletter__wrapper .newsletter__form {
   margin-top: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
-.newsletter__wrapper .newsletter__form div {
+.newsletter__wrapper .newsletter__form .input-field {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
-.newsletter__wrapper .newsletter__form div span {
-  font-size: 14px;
-}
-.newsletter__wrapper .newsletter__form input {
+.newsletter__wrapper .newsletter__form .input-field input {
   border-radius: 0;
   outline: none;
   padding: 1rem;
@@ -527,7 +525,7 @@
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
-.newsletter__wrapper .newsletter__form button {
+.newsletter__wrapper .newsletter__form .input-field button {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -540,18 +538,23 @@
   width: -moz-fit-content;
   width: fit-content;
   transition: 0.4s;
-  align-self: flex-start;
+  align-self: stretch;
   padding: 1rem;
 }
-.newsletter__wrapper .newsletter__form button:hover {
+.newsletter__wrapper .newsletter__form .input-field button:hover {
   background: #a570ff;
 }
-.newsletter__wrapper .newsletter__form button:focus-visible {
+.newsletter__wrapper .newsletter__form .input-field button:focus-visible {
   border: 2px solid #000000;
   outline: solid 2px #FFFFFF;
   outline-offset: 1px;
   border-radius: 4px;
   transition: none;
+}
+.newsletter__wrapper .newsletter__form span {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
 }
 
 @media (max-width: 900px) {

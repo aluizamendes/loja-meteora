@@ -1,4 +1,5 @@
 const formNewsletter = document.querySelector("[data-newsletter-form]")
+const helperTxtNewsletter = document.querySelector("[data-helper-text-newsletter]")
 
 function renderNewsletterModal() {
     const div = document.querySelector(".modal-newsletter")
@@ -20,15 +21,27 @@ function renderNewsletterModal() {
 
 function submitNewsletterForm(e) {
     e.preventDefault()
-    console.log("FORM DE NEWSLETTER ENVIADO")
+    const emailInput = document.getElementById("emailInput")
 
-    renderNewsletterModal()
-    const newsletterModal = document.querySelector("[data-modal-newsletter]")
-    const closeNewsletterModalBtn = document.querySelector("[data-fechar-modal-newsletter-btn]")
+    const emailIsNotValid = emailInput.value == "" || emailInput.value.length < 6 || emailInput.value.includes("@") == false
+     
+    if (emailIsNotValid) {
+        emailInput.style.borderColor = "red"
+        helperTxtNewsletter.style.color = "red"
+        helperTxtNewsletter.textContent = "Insira um email válido."
 
-    newsletterModal.showModal()
-    closeNewsletterModalBtn.addEventListener("click", () => newsletterModal.close())
+    } else {
+        renderNewsletterModal()
+        emailInput.style.borderColor = "#000000"
+        emailInput.value = ""
+        helperTxtNewsletter.textContent = ""
 
+        const newsletterModal = document.querySelector("[data-modal-newsletter]")
+        const closeNewsletterModalBtn = document.querySelector("[data-fechar-modal-newsletter-btn]")
+    
+        newsletterModal.showModal()
+        closeNewsletterModalBtn.addEventListener("click", () => newsletterModal.close())
+    }
 }
 
 formNewsletter.addEventListener("submit", submitNewsletterForm)

@@ -227,12 +227,12 @@
                     <div class="newsletter__title">
                         <h3>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? <span>Cadastre-se!</span></h3>
                     </div>
-                    <form class="newsletter__form" data-newsletter-form>
-                        <div>
+                    <form class="newsletter__form" novalidate data-newsletter-form>
+                        <div class="input-field">
                             <input type="email" name="email" id="emailInput" placeholder="Digite seu email" required>
-                            <span id="helperText"></span>
+                            <button type="submit">Enviar</button>
                         </div>
-                        <button type="submit">Enviar</button>
+                        <span id="helperText" data-helper-text-newsletter></span>
                     </form>
                 </div>
             </div>

@@ -27,33 +27,36 @@
     .newsletter__form {
         margin-top: 2rem;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 8px;
 
-        div {
+        .input-field {
             display: flex;
-            flex-direction: column;
-            width: 50%;
+            width: 100%;
 
-            span {
-                font-size: 14px;
+            input {
+                border-radius: 0;
+                outline: none;
+                padding: 1rem;
+                border: 1px solid $black-1;
+                width: 100%;            
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+            }
+
+            button {
+                @include primary-btn($primary-purple, $white);
+                align-self: stretch;
+                padding: 1rem;
             }
         }
 
-        input {
-            border-radius: 0;
-            outline: none;
-            padding: 1rem;
-            border: 1px solid $black-1;
-            width: 100%;            
-            font-family: 'Inter', sans-serif;
+        span {
+            width: 100%;
             font-size: 16px;
-        }
-
-        button {
-            @include primary-btn($primary-purple, $white);
-            align-self: flex-start;
-            padding: 1rem;
+            text-align: left;
         }
     }
 }
